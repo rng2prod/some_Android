@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    tools:context="com.rngproduction.capslock.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutTopNavigation"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        app:layout_anchorGravity="center">
+
+        <RelativeLayout
+            android:id="@+id/linearTopNavigation"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            app:layout_anchorGravity="center">
+
+            <ImageView
+                android:id="@+id/imageTopNavigation"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_anchorGravity="center"
+                android:src="@drawable/capslock_logo_header_"/>
+
+            <TextView
+                android:id="@+id/textTopNavigation"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/imageTopNavigation"
+                android:text="CapsLock\nКарта|Контакты"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#292929"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:sothree="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sliding_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            sothree:panelHeight="30dp"
+            sothree:shadowHeight="2dp"
+            sothree:overlay="true"
+            sothree:fadeColor="#6E6E6E">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yandex.mapkit.mapview.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="#434343">
+
+        <TextView
+            android:id="@+id/MapBtnCapsLock"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="270dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/round_capslock_ico2"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/MapBtnUp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/round_button"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="#CDCDCD"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/MapBtnDown"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="410dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/round_button"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="#CDCDCD"
+            android:textSize="28dp" />
+
+    </com.yandex.mapkit.mapview.MapView>
+    </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:gravity="center|top">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#474747"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:text="-----"
+                    android:textSize="20sp" />
+              <RelativeLayout
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:background="#101010">
+                    <ImageView
+                    android:id="@+id/imageContacts"
+                    android:layout_width="fill_parent"
+                    android:layout_height="270dp"
+                    android:src="@drawable/capslock_night" />
+
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_below="@+id/imageContacts">
+
+                      <TextView
+                          android:id="@+id/contactsText1"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentStart="true"
+                          android:layout_alignParentEnd="true"
+                          android:layout_centerHorizontal="true"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:text="some text"
+                          android:textColor="#F3F3F3"
+                          android:textSize="17dp" />
+
+                      <TextView
+                          android:id="@+id/contactsText2"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/contactsText1"
+                          android:layout_alignParentStart="true"
+                          android:layout_alignParentEnd="true"
+                          android:layout_centerHorizontal="true"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:text="some text"
+                          android:textColor="#F3F3F3"
+                          android:textSize="17dp" />
+
+                      <TextView
+                          android:id="@+id/contactsText3"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/contactsText2"
+                          android:layout_alignParentStart="true"
+                          android:layout_alignParentEnd="true"
+                          android:layout_centerHorizontal="true"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:text="some text"
+                          android:textColor="#F3F3F3"
+                          android:textSize="17dp" />
+
+                      <TextView
+                          android:id="@+id/contactsText4"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/contactsText3"
+                          android:layout_alignParentStart="true"
+                          android:layout_alignParentEnd="true"
+                          android:layout_centerHorizontal="true"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:text="some text"
+                          android:textColor="#F3F3F3"
+                          android:textSize="17dp" />
+                  </RelativeLayout>
+
+    </RelativeLayout>
+            </LinearLayout>
+
+        </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+    </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="#222222"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:onClick="onclck_menu1">
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/textViewMenu1"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="1dp"
+                android:background="#222222"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_ico32"
+                android:onClick="onclck_menu1"/>
+            <TextView
+                android:id="@+id/textViewMenu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:background="#222222"
+                android:scaleType="fitXY"
+                android:text="Home"
+                android:textColor="#E3E3E3"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="#222222"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:onClick="onclck_menu2">
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/textViewMenu2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="1dp"
+                android:background="#222222"
+                android:scaleType="fitXY"
+                android:src="@drawable/book_ico32"
+                android:onClick="onclck_menu2"/>
+            <TextView
+                android:id="@+id/textViewMenu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:background="#222222"
+                android:scaleType="fitXY"
+                android:text="Booking"
+                android:textColor="#E3E3E3"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="#222222"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:onClick="onclck_menu3">
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/textViewMenu3"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="1dp"
+                android:background="#222222"
+                android:scaleType="fitXY"
+                android:src="@drawable/caps_ico32"
+                android:onClick="onclck_menu3"/>
+            <TextView
+                android:id="@+id/textViewMenu3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:background="#222222"
+                android:scaleType="fitXY"
+                android:text="Capsules"
+                android:textColor="#E3E3E3"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="#222222"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:onClick="onclck_menu4">
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/textViewMenu4"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="1dp"
+                android:background="#222222"
+                android:scaleType="fitXY"
+                android:src="@drawable/space_ico32"
+                android:onClick="onclck_menu4"/>
+            <TextView
+                android:id="@+id/textViewMenu4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:background="#222222"
+                android:scaleType="fitXY"
+                android:text="Spaces"
+                android:textColor="#E3E3E3"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#222222"
+            android:onClick="onclck_menu5">
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/textViewMenu5"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="1dp"
+                android:background="#222222"
+                android:scaleType="fitXY"
+                android:src="@drawable/more_ico32"
+                android:onClick="onclck_menu5"/>
+
+            <TextView
+                android:id="@+id/textViewMenu5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:background="#222222"
+                android:scaleType="fitXY"
+                android:text="More"
+                android:textColor="#E3E3E3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
